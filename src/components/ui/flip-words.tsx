@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export const FlipWords = ({
     words,
-    duration = 3000,
+    duration = 1000,
     className,
 }: {
     words: string[];
@@ -30,19 +30,19 @@ export const FlipWords = ({
 
     // Define gradient styles for each word
     const gradientStyles = {
-        "better": {
+        "faster": {
             background: 'linear-gradient(56deg, #162CF1 0%, #A264F1 92%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             display: 'inline-block'
         },
-        "cute": {
+        "better": {
             background: 'linear-gradient(56deg, #D5FC67 0%, #49990A 28%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             display: 'inline-block'
         },
-        "beautiful": {
+        "easier": {
             background: 'linear-gradient(56deg, #990000 0%, #ECA35E 22%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
