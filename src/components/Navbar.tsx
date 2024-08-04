@@ -25,7 +25,7 @@ export default function Navbar() {
                 <div className='flex items-center justify-between h-full'>
                     <div className='flex items-center'>
                         <Link href='/' passHref>
-                            <Image src="/inno3.png" alt="Spice N' Oil Logo" width="341" height="81" className='ml-0' />
+                            <Image src="/inno3.png" alt="Spice N' Oil Logo" width="300" height="64" className='ml-0' />
                         </Link>
                     </div>
                     <div className='hidden md:flex space-x-4'>
@@ -50,7 +50,7 @@ export default function Navbar() {
                 </div>
             </div>
             {isClick && (
-                <div className="md:hidden bg-gray-100">
+                <div className="md:hidden bg-[#000000]">
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         <NavItem href='/' title='Products' icon={ProductsIcon} mobile={true} />
                         <NavItem href='/products' title='Services' icon={ServicesIcon} mobile={true} />
@@ -75,7 +75,7 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ href, title, icon, mobile, contact }) => (
     <Link
         href={href}
-        className={`flex items-center space-x-2 block ${mobile ? 'text-white' : 'text-white'} hover:bg-light-red hover:ring-2 hover:ring-white hover:ring-opacity-60 rounded-lg px-3 py-2 font-semibold transition-all`}
+        className={`flex items-center space-x-2  ${mobile ? 'text-white' : 'text-white'} hover:bg-light-red hover:ring-2 hover:ring-white hover:ring-opacity-60 rounded-lg px-3 py-2 font-semibold transition-all`}
         passHref
     >
         <Image
@@ -90,13 +90,15 @@ const NavItem: React.FC<NavItemProps> = ({ href, title, icon, mobile, contact })
 );
 
 const MenuIcon = () => (
-    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#333">
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
     </svg>
 );
 
 const CloseIcon = () => (
-    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#333">
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#ffffff">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
     </svg>
 );
+
+
