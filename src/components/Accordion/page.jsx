@@ -11,9 +11,9 @@ const Accordion = () => {
 
   const faqData = [
     {
-      question: "What is Web Development?",
+      question: "What is 3D Printing and how it works?",
       answer:
-        "Web Development broadly refers to the tasks associated with developing functional websites and applications for the Internet. The web development process includes web design, web content development, client-side/server-side scripting and network security configuration, among other tasks.",
+        "3D Printing indicates the manufacturing process that develops or creates 3D parts in layers from the CAD data. The 3D Printing technology is important as it provides direct manufacturing. It indicates the design that goes from you to the physical product directly via any Printer or computer"
     },
     {
       question: "What is HTML?",

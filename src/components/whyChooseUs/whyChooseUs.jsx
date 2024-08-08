@@ -3,6 +3,7 @@ import Image from "next/image";
 
 export default function WhyChooseUs() {
   return (
+  
     <div className="flex items-center justify-center min-h-screen bg-[#000000] p-4">
       <div className="w-full max-w-[1000px] h-auto bg-[#000000] rounded-[30px] shadow-lg p-8 border-2 border-white flex flex-col items-center">
         <div className="text-center">
@@ -12,8 +13,6 @@ export default function WhyChooseUs() {
           <hr className="border-t-2 border-gray-400 mt-4 mb-5 mx-auto w-[100px] md:w-[200px]" />
         </div>
         <div className="flex flex-wrap justify-center items-center gap-4 mt-8 ml-0 md:ml-4">
-          {" "}
-          {/* Adjusted margin-top and margin-left */}
           <Image
             src="/Group 19.png"
             alt="Image 1"
@@ -34,11 +33,9 @@ export default function WhyChooseUs() {
             width={333}
             height={173}
             className="rounded-lg mt-3"
-          />{" "}
-          {/* Added margin-top */}
+          />
           <div className="mt-8">
-            {" "}
-            {/* Adjusted margin-top */}
+
             <Image
               src="/Group 20.png"
               alt="Image 4"
@@ -48,8 +45,6 @@ export default function WhyChooseUs() {
             />
           </div>
           <div className="mt-8">
-            {" "}
-            {/* Adjusted margin-top */}
             <Image
               src="/Group 21.png"
               alt="Image 5"

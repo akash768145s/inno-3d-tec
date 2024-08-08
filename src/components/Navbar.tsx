@@ -1,5 +1,3 @@
-
-
 'use client';
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -31,8 +29,8 @@ export default function Navbar() {
                     <div className='hidden md:flex space-x-4'>
                         <NavItem href='/' title='Products' icon={ProductsIcon} />
                         <NavItem href='/products' title='Services' icon={ServicesIcon} />
-                        <NavItem href='/pricing' title='Pricing' icon={PricingIcon} />
-                        <NavItem href='/about' title='About Us' icon={AboutUsIcon} />
+                        <NavItem href='/pricing' title='Clients' icon={PricingIcon} />  
+                        <NavItem href='/about-us' title='About Us' icon={AboutUsIcon} />
                         <NavItem href='/contact' title='Contact' icon={ContactIcon} contact={true} />
                     </div>
                     <div className='md:hidden'>
@@ -54,8 +52,8 @@ export default function Navbar() {
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         <NavItem href='/' title='Products' icon={ProductsIcon} mobile={true} />
                         <NavItem href='/products' title='Services' icon={ServicesIcon} mobile={true} />
-                        <NavItem href='/pricing' title='Pricing' icon={PricingIcon} mobile={true} />
-                        <NavItem href='/about' title='About Us' icon={AboutUsIcon} mobile={true} />
+                        <NavItem href='/pricing' title='Clients' icon={PricingIcon} mobile={true} />
+                        <NavItem href='/about-us' title='About Us' icon={AboutUsIcon} mobile={true} />
                         <NavItem href='/contact' title='Contact' icon={ContactIcon} mobile={true} contact={true} />
                     </div>
                 </div>
@@ -75,7 +73,7 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ href, title, icon, mobile, contact }) => (
     <Link
         href={href}
-        className={`flex items-center space-x-2  ${mobile ? 'text-white' : 'text-white'} hover:bg-light-red hover:ring-2 hover:ring-white hover:ring-opacity-60 rounded-lg px-3 py-2 font-semibold transition-all`}
+        className={`flex items-center space-x-2  ${mobile ? 'text-white' : 'text-white'} hover:bg-light-red hover:ring-2 hover:ring-white hover:ring-opacity-60 hover:rounded-[30px] rounded-lg px-3 py-2 font-semibold transition-all`}
         passHref
     >
         <Image
@@ -100,5 +98,3 @@ const CloseIcon = () => (
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
     </svg>
 );
-
-
