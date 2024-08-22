@@ -1,11 +1,10 @@
 import React from "react";
 import "./bootstrap.min.css";
 import "./main.css";
-const SavannahCafe = () => {
+const ProductPage = () => {
   return (
     <div id="page-top">
 
-      {/* Header */}
       <header className="page-section masthead2">
         <div className="container h-50">
           <h1 className="section-header text-white font-weight-bold">
@@ -168,4 +167,4 @@ const SavannahCafe = () => {
   );
 };
 
-export default SavannahCafe;
+export default ProductPage;
