@@ -6,6 +6,28 @@
     --input-padding-y: 0.75rem;
 }
 
+body {
+    color: #ffffff;
+    /* Bright white */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+.card-title,
+.card-text,
+.tags,
+.blog-sidebar-title,
+.blog-sidebar-text,
+.link-menu {
+    color: #ffffff !important;
+}
 
 body,
 html {
@@ -15,6 +37,40 @@ html {
 
 .btn {
     font-family: 'Poppins', sans-serif;
+}
+
+.btn-white {
+    background-color: #ffffff !important;
+    /* White background */
+    color: #000000 !important;
+    width: 150px; 
+    /* Black text */
+    border: 1px solid #000000;
+    /* Optional: black border */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    text-align: center;
+    /* Center text */
+    display: inline-block;
+    /* Make it look like a button */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 4px;
+    /* Optional: rounded corners */
+    font-weight: bold;
+    /* Optional: bold text */
+}
+
+.btn-white:hover {
+    background-color: #f0f0f0;
+    /* Optional: hover effect */
+    color: #000000 !important;
+    /* Ensure text color remains black on hover */
+}
+
+
+.text-black {
+    color: #000000;
 }
 
 .btn-success {
@@ -30,52 +86,41 @@ html {
 }
 
 .masthead2 {
-
-    background-image: url("/backgroundimage.jpg");
+    position: relative;
+    /* Ensure the container is positioned to contain the overlay */
+    background-image: url("/backgroundimage.png");
     background-position: 50% -26px;
     background-color: #242424;
-
+    background-size: cover;
+    /* Ensure the image covers the entire area */
+    height: 30vh;
 }
 
-a.social-icon {
-    color: #242424;
+.masthead2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black overlay with 60% opacity */
+    z-index: 1;
+    /* Ensure the overlay sits above the background image */
 }
 
-a.social-icon:hover {
-    color: #c0aa83;
-}
-
-.social-icon {
-    background-color: #ECE4C3;
-    width: 80px;
-    height: 80px;
-    padding: 20px;
-    margin: 10px;
-}
-
-.social-icon a {
-    background-color: #B98C45;
-    width: 50px;
-    height: 50px;
-    padding: 10px 16px;
-    margin-right: 6px;
+.masthead2 .container {
     position: relative;
-    display: block;
-
+    z-index: 2;
+    /* Ensure the content is above the overlay */
 }
-
-.social-icon a:hover {
-    color: #242424;
-
-}
-
 
 .page-section {
     padding: 8rem 0;
 }
 
 .main-menu {
-    color: #c0aa83;
+    color: #000;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 900;
@@ -83,7 +128,7 @@ a.social-icon:hover {
 
 a.link-menu {
     text-decoration: none;
-    color: #c0aa83;
+    color: #fff;
 }
 
 .footer-info {
@@ -130,11 +175,17 @@ a.link-menu {
     font-weight: 300;
 }
 
+.blog-form,
+.card,
+.input-group-text,
+.form-control {
+    color: #fff;
+}
 
 #mainNav {
     -webkit-box-shadow: 0.05rem 1rem rgba(0, 0, 0, 0.15);
     box-shadow: 0.05rem 1rem rgba(0, 0, 0, 0.15);
-    background-color: #fff;
+    background-color: #000;
     -webkit-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
 }
@@ -302,6 +353,25 @@ a.explore-link:hover {
 
     color: #c0aa83;
 
+}
+
+.input-group.mb-3 {
+    margin-bottom: 0;
+    /* Removes bottom margin from the input group */
+}
+
+.tags {
+    margin: 0;
+    /* Removes margin from the tags paragraph */
+    padding-top: 10px;
+    /* Adjust padding for spacing as needed */
+}
+
+.btn.btn-dark.btn-lg {
+    margin-top: 10px;
+    /* Adjust this value to fine-tune spacing above the button */
+    margin-bottom: 0;
+    /* Removes any bottom margin */
 }
 
 .tags {

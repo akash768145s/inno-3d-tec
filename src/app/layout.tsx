@@ -1,13 +1,13 @@
-
+// src/app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { CartProvider } from "../context/CartContext";
-import type { Metadata } from "next";
+import "@uploadthing/react/styles.css";
+import ClientOnlyProviders from "./ClientProviders"; // Import the client-only providers
 
 // Setting up the Google font
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Inno3DTech",
   description: "3D Design and 3D Printing",
 };
@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CartProvider>
+        <ClientOnlyProviders>
           {children}
-        </CartProvider>
+        </ClientOnlyProviders>
       </body>
     </html>
   );

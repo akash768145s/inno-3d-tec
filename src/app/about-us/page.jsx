@@ -28,14 +28,21 @@ export default function Home() {
         <div className="welcome-text-container">
           <p className="welcome-text">
             Welcome to Inno3DTech, your premier destination for cutting-edge 3D
-            printing services. Since 2020, we’ve been transforming ideas into
+            printing services. Since 2020, we have been transforming ideas into
             reality with precision and creativity. Serving diverse industries,
             we deliver high-quality, customized solutions tailored to your
             needs. Join us in revolutionizing manufacturing and bringing
             innovative visions to life. Let's create something extraordinary
             together.
           </p>
+        
+      
+          <div className="banner-text">
+            <p className="line2">Watch Our 3D Printing Process</p>
+          </div>
+
         </div>
+        
         <style jsx>{`
           @import url("https://fonts.googleapis.com/css?family=Poppins");
 
@@ -89,7 +96,9 @@ export default function Home() {
             background-color: #ffffff;
             margin: 0.5rem 0;
           }
-
+          .line2 {
+    white-space: nowrap;
+  }
           .welcome-text-container {
             width: 90%;
             max-width: 1091px;
@@ -107,6 +116,7 @@ export default function Home() {
             padding: 2rem;
             border-radius: 30px;
             margin-top: 2rem;
+            margin-bottom: 2rem;
           }
 
           .welcome-text {

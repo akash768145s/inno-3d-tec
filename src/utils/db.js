@@ -1,4 +1,3 @@
-// src/utils/db.js
 import mongoose from "mongoose";
 
 const connect = async () => {
@@ -10,12 +9,14 @@ const connect = async () => {
   try {
     console.log("Connecting to MongoDB...");
     console.log(`MongoDB URL: ${process.env.MONGO_URL}`);
+
     await mongoose.connect(process.env.MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       serverSelectionTimeoutMS: 30000, // 30 seconds
       socketTimeoutMS: 45000, // 45 seconds
+      tls: true, // Enables TLS/SSL
+      tlsInsecure: true, // Set to false in production; true for development to ignore invalid certificates
     });
+
     console.log("MongoDB connection successfully established.");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
