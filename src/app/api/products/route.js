@@ -59,37 +59,46 @@ export async function DELETE(request) {
   }
 }
 
-
-
-export async function GET(request) {
+export async function GET() {
   await connect();
-  
+
   try {
     const products = await Product.find();
     return NextResponse.json({ products });
   } catch (error) {
     console.error("Error fetching products:", error);
-    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { message: "Internal server error" },
+      { status: 500 }
+    );
   }
 }
-
 export async function GET_PRODUCT(request) {
   await connect();
 
-  const { id } = request.url.split('/').pop();
+  const { id } = request.url.split("/").pop();
 
   if (!id) {
-    return NextResponse.json({ message: "Product ID is required" }, { status: 400 });
+    return NextResponse.json(
+      { message: "Product ID is required" },
+      { status: 400 }
+    );
   }
 
   try {
     const product = await Product.findById(id);
     if (!product) {
-      return NextResponse.json({ message: "Product not found" }, { status: 404 });
+      return NextResponse.json(
+        { message: "Product not found" },
+        { status: 404 }
+      );
     }
     return NextResponse.json(product);
   } catch (error) {
     console.error("Error fetching product:", error);
-    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { message: "Internal server error" },
+      { status: 500 }
+    );
   }
 }

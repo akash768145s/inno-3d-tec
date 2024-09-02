@@ -27,7 +27,7 @@ export default function Navbar() {
                         </Link>
                     </div>
                     <div className='hidden md:flex space-x-4'>
-                        <NavItem href='/' title='Products' icon={ProductsIcon} />
+                        <NavItem href='/sign-in' title='Products' icon={ProductsIcon} />
                         <NavItem href='/products' title='Services' icon={ServicesIcon} />
                         <NavItem href='/pricing' title='Clients' icon={PricingIcon} />  
                         <NavItem href='/about-us' title='About Us' icon={AboutUsIcon} />
@@ -50,7 +50,7 @@ export default function Navbar() {
             {isClick && (
                 <div className="md:hidden bg-[#000000]">
                     <div className="px-2 pt-2 pb-3 space-y-1">
-                        <NavItem href='/' title='Products' icon={ProductsIcon} mobile={true} />
+                        <NavItem href='/sign-in' title='Products' icon={ProductsIcon} mobile={true} />
                         <NavItem href='/products' title='Services' icon={ServicesIcon} mobile={true} />
                         <NavItem href='/pricing' title='Clients' icon={PricingIcon} mobile={true} />
                         <NavItem href='/about-us' title='About Us' icon={AboutUsIcon} mobile={true} />

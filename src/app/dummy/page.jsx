@@ -127,7 +127,18 @@ const ProductPage = async () => {
                         </h5>
                         <p className="card-text small">{product.description}</p>
                         <p className="tags">Price: ₹{product.price}</p>
-                        <Link href="#" className="btn btn-white">
+                        <Link
+                          href={{
+                            pathname: `/product/${product._id}`,
+                            query: {
+                              name: product.name,
+                              price: product.price,
+                              imageUrl: product.imageUrl,
+                              description: product.description,
+                            },
+                          }}
+                          className="btn btn-white"
+                        >
                           Buy Now
                         </Link>
                       </div>

@@ -1,11 +1,18 @@
+import { connect } from "@/utils/db"; // Adjust the path according to your project structure
+import Product from "@/models/Product"; // Adjust the path according to your project structure
 import { NextResponse } from "next/server";
-import connect from "@/utils/db";
-import Product from "@/models/Product";
 
 export async function GET(request, { params }) {
+  await connect();
+
   const { id } = params;
 
-  await connect();
+  if (!id) {
+    return NextResponse.json(
+      { message: "Product ID is required" },
+      { status: 400 }
+    );
+  }
 
   try {
     const product = await Product.findById(id);
